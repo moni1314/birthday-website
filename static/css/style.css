@@ -1,0 +1,346 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: linear-gradient(135deg,#ff9ecf,#ff6fa5,#ffd6ea);
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 40px 0;
+}
+
+.container{
+    width:90%;
+    max-width:1000px;
+    text-align:center;
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(15px);
+    padding:50px;
+    border-radius:30px;
+    box-shadow:0 15px 40px rgba(0,0,0,.2);
+    margin:50px auto;
+}
+
+h1 {
+    color: white;
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: white;
+    font-weight: 400;
+}
+
+.message {
+    color: white;
+    font-size: 20px;
+    line-height: 1.8;
+    margin-top: 30px;
+}
+
+#countdown {
+    background: white;
+    color: #ff4081;
+    padding: 20px 45px;
+    border-radius: 18px;
+    font-size: 35px;
+    font-weight: bold;
+    display: inline-block;
+    box-shadow: 0 10px 25px rgba(255,64,129,.35);
+}
+button {
+    margin-top: 30px;
+    padding: 18px 45px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(45deg,#ff4081,#ff6fa5);
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+    button:hover {
+        transform: scale(1.08);
+        box-shadow: 0 10px 25px rgba(255,64,129,.5);
+    }
+
+ #surprise {
+    margin-top: 40px;
+}
+#hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.heart {
+    position: absolute;
+    bottom: -20px;
+    color: #ff2d75;
+    font-size: 20px;
+    animation: floatHeart linear forwards;
+}
+
+@keyframes floatHeart {
+
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-110vh) scale(1.8);
+        opacity: 0;
+    }
+}
+#balloons {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.balloon {
+    position: absolute;
+    bottom: -150px;
+    width: 60px;
+    height: 80px;
+    border-radius: 50%;
+    animation: floatBalloon linear forwards;
+}
+
+    .balloon::after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 70px;
+        background: white;
+        left: 50%;
+        top: 80px;
+    }
+
+@keyframes floatBalloon {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-120vh);
+    }
+}
+#surprise {
+    display: none;
+    margin-top: 40px;
+    background: white;
+    color: #444;
+    padding: 35px;
+    border-radius: 25px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 15px 30px rgba(0,0,0,.2);
+}
+#typing {
+    color: #444;
+    font-size: 22px;
+    line-height: 2;
+    white-space: pre-line;
+    text-align: left;
+}
+#surprise h2 {
+    color: #ff4081;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+#welcome {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,#ff7eb3,#ff4d88);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+    #welcome h1 {
+        color: white;
+        font-size: 60px;
+        margin-bottom: 20px;
+    }
+
+    #welcome p {
+        color: white;
+        font-size: 28px;
+        margin-bottom: 35px;
+    }
+
+#enterBtn {
+    padding: 18px 45px;
+    font-size: 24px;
+    border: none;
+    border-radius: 50px;
+    background: white;
+    color: #ff4081;
+    cursor: pointer;
+    transition: .3s;
+}
+
+    #enterBtn:hover {
+        transform: scale(1.1);
+    }
+#musicBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 50px;
+    background: #ff4081;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 10000;
+    box-shadow: 0 5px 15px rgba(0,0,0,.3);
+}
+
+    #musicBtn:hover {
+        transform: scale(1.08);
+    }
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 20px;
+    margin-top: 40px;
+    justify-items: center;
+}
+
+    .gallery img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        border-radius: 20px;
+        transition: .4s;
+        box-shadow: 0 10px 20px rgba(0,0,0,.2);
+    }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+
+.slider {
+    margin: 40px auto;
+    width: 80%;
+    max-width: 550px;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+    .slider img {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        max-height: 450px;
+        display: block;
+        margin: auto;
+        border-radius: 15px;
+    }
+.special-box {
+    margin-top: 40px;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,.2);
+}
+
+    .special-box h2 {
+        color: #ff4081;
+    }
+
+.reason {
+    margin-top: 18px;
+    font-size: 20px;
+    color: #444;
+}
+#petals {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.petal {
+    position: absolute;
+    top: -50px;
+    font-size: 28px;
+    animation: fallPetal linear forwards;
+    z-index: 999;
+}
+
+@keyframes fallPetal {
+
+    from {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+#quote {
+    color: #ff4081; /* Pink */
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+.special-box {
+    margin-top: 50px;
+    background: white;
+    padding: 35px;
+    border-radius: 25px;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,.2);
+}
+
+    .special-box h2 {
+        color: #ff4081;
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+.final-message {
+    color: #444;
+    font-size: 22px;
+    line-height: 2;
+    text-align: center;
+}

@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Sathiya ❤️</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div id="petals"></div>
+    <div id="welcome">
+
+        <h1>🎉 Happy Birthday Sathiya 🎉</h1>
+
+        <p>💖 A Special Surprise Awaits You 💖</p>
+
+        <button id="enterBtn">🎁 Enter</button>
+
+    </div>
+    <div id="hearts"></div>
+    <div id="balloons"></div>
+
+    <div class="container" id="mainContent">
+
+        <h1>🎉 Happy Birthday Sathiya 🎉</h1>
+
+        <h2>Wishing You a Day Filled with Happiness, Smiles & Love 💖</h2>
+
+        <div id="countdown"></div>
+
+        <p class="message">
+            Dear Sathiya Akka, 💕<br><br>
+
+            Wishing you a birthday filled with happiness, laughter,
+            good health, success, and lots of beautiful memories.
+            Thank you for being such a wonderful person.
+
+            May God bless you with endless joy and make all your dreams
+            come true.
+
+            Have a fantastic birthday! 🎂🎈🎉
+        </p>
+
+        <button id="wishBtn">🎁 Open Your Surprise</button>
+
+        <div id="surprise">
+
+            <h2>💌 A Special Birthday Wish 💌</h2>
+
+            <p id="typing"></p>
+
+        </div>
+        <h2>📸 Beautiful Memories</h2>
+
+        <div class="slider">
+            <img id="slideImage"
+                 src="{% static 'images/photo1.jpg' %}"
+                 alt="Birthday Photo">
+        </div>
+        <div class="special-box">
+
+            <h2>💖 Why You're So Special 💖</h2>
+
+            <div class="reason">🌸 Your smile brightens everyone's day.</div>
+
+            <div class="reason">❤️ Your kindness makes every moment beautiful.</div>
+
+            <div class="reason">🌟 You always spread happiness wherever you go.</div>
+
+            <div class="reason">🎂 Wishing you endless joy, success and good health.</div>
+
+        </div>
+        <div class="quoteBox">
+
+            <h2 id="quote">
+                🌸 Keep Smiling Always 🌸
+            </h2>
+
+        </div>
+        <div class="special-box">
+
+            <h2>🌸 Once Again... 🌸</h2>
+
+            <p style="font-size:22px;color:#444;line-height:2;">
+
+                Happy Birthday Sathiya Akka! 🎂❤️
+
+                May every day of your life be filled with
+                happiness, laughter and success.
+
+                Stay blessed,
+                Stay healthy,
+                Keep smiling forever. 😊
+
+                <br><br>
+
+                💖 With Lots of Love 💖<br>
+                <b>— Moni</b>
+
+            </p>
+
+        </div>
+       
+    </div>
+    <audio id="bgMusic" loop>
+        <source src="{% static 'music/happy-birthday.mp3' %}" type="audio/mpeg">
+    </audio>
+
+
+    <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>
